@@ -1,0 +1,10 @@
+.vercel
+.DS_Store
+
+# Documentos internos de trabalho (não fazem parte do site)
+research.md
+plan.md
+HANDOFF.md
+cutout.swift
+qa_mobile.html
+_archive/

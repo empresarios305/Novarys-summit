@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novarys Creator Summit · 1 e 2 de agosto · Alphaville-SP</title>
+<meta name="description" content="2 dias, 48 horas. Transformando conteúdo em negócios com os maiores nomes do empreendedorismo digital do Brasil. Auditório de 100 lugares. R$ 97 com direito a 2 convidados.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Novarys Creator Summit · 1 e 2 de agosto · Alphaville-SP">
+<meta property="og:description" content="2 dias, 48 horas. Transformando conteúdo em negócios com os maiores nomes do empreendedorismo digital do Brasil. R$ 97 com 2 convidados.">
+<meta property="og:image" content="https://novarys-summit.vercel.app/assets/img/og.jpg">
+<meta property="og:url" content="https://novarys-summit.vercel.app/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14230d">
+
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<link rel="preload" href="/assets/fonts/Anton.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/Archivo-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/Archivo-400.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+/* ============================================================
+   NOVARYS CREATOR SUMMIT · v4 · IDENTIDADE OFICIAL DO EVENTO
+   Fonte: prancheta do designer (verde profundo + ondas verde-limão
+   + branco + fotos coloridas recortadas + setas circulares + molduras finas)
+   Tokens: bg #101d09→#1a2c10 · lime #c8e64c · branco · Anton/Archivo/Space Mono
+   Radius 0 (molduras finas) · glow lime no lugar de sombra dura
+   ============================================================ */
+@font-face{font-family:'Anton';src:url('/assets/fonts/Anton.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Archivo';src:url('/assets/fonts/Archivo-300.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Archivo';src:url('/assets/fonts/Archivo-400.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Archivo';src:url('/assets/fonts/Archivo-500.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Archivo';src:url('/assets/fonts/Archivo-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Archivo';src:url('/assets/fonts/Archivo-900.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'Space Mono';src:url('/assets/fonts/SpaceMono-700.woff2') format('woff2');font-weight:700;font-display:swap}
+
+:root{
+  --bg-0:#0c1607;
+  --bg-1:#131f0b;
+  --bg-2:#1b2c10;
+  --bg-3:#243a16;
+  --lime:#c8e64c;
+  --lime-bright:#e4f87c;
+  --white:#ffffff;
+  --dim:rgba(255,255,255,.78);
+  --faint:rgba(255,255,255,.55);
+  --ink:#14230d;
+  --line:rgba(255,255,255,.14);
+  --line-lime:rgba(200,230,76,.4);
+  --gutter:clamp(20px,4vw,56px);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:'Archivo',system-ui,sans-serif;
+  background:linear-gradient(180deg,var(--bg-0) 0%,var(--bg-1) 30%,var(--bg-2) 100%);
+  color:var(--white);
+  font-size:16.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:var(--lime);color:var(--ink)}
+
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gutter)}
+
+/* ---------- tipografia ---------- */
+.display{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:.96;letter-spacing:.01em}
+.mono{font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.lime{color:var(--lime)}
+
+/* ---------- reveals ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--i,0)*80ms)}
+.rv.in{opacity:1;transform:none}
+/* Reduce Motion: versão SUAVE (fades e brilhos), nunca página estática */
+@media (prefers-reduced-motion:reduce){
+  .rv{transform:none!important;transition:opacity .7s ease}
+  .lockup .ln,.rise{animation-name:fade-only}
+  .wave{animation:none!important}
+  .beam{display:none}
+  .lineup .rv .row-spk,.lineup .rv .row-soon{transform:none!important;transition:opacity .6s ease}
+  .btn::before{display:none}
+  .sec-head .arr{transform:none;transition:none}
+  .marquee .track{animation-duration:44s!important}
+  .row-spk:hover .nm,.row-spk:hover .ph,.pcard:hover,.gcard:hover{transform:none}
+}
+@keyframes fade-only{from{opacity:0}}
+
+/* ---------- botões ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:'Archivo';font-weight:700;font-size:15px;letter-spacing:.03em;text-transform:uppercase;
+  border:none;border-radius:0;cursor:pointer;text-decoration:none;
+  background:var(--lime);color:var(--ink);
+  padding:18px 32px;
+  box-shadow:0 10px 44px rgba(200,230,76,.28);
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s;
+  white-space:nowrap;
+  position:relative;overflow:hidden;
+}
+.btn::before{
+  content:"";position:absolute;top:0;left:-80%;width:55%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-20deg);transition:left .55s var(--ease);
+}
+.btn:hover::before{left:125%}
+.btn:hover{transform:translateY(-2px);background:var(--lime-bright);box-shadow:0 16px 56px rgba(200,230,76,.4)}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:17px;height:17px;flex:none}
+
+/* ---------- header ---------- */
+.top{border-bottom:1px solid var(--line);position:relative;z-index:5}
+.top .wrap{height:62px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.top img{height:23px;width:auto}
+.top .mono{color:var(--faint)}
+@media (max-width:700px){.top .mono{display:none}}
+
+/* ---------- luzes da identidade (ondas lime animadas) ---------- */
+.stage{position:relative;overflow:hidden}
+.wave{position:absolute;pointer-events:none;border-radius:50%;border:2px solid transparent}
+.w1{
+  width:1500px;height:820px;left:-320px;top:-380px;transform:rotate(-9deg);
+  border-bottom:3px solid rgba(200,230,76,.75);filter:blur(5px);
+  animation:drift1 11s ease-in-out infinite alternate;
+}
+.w2{
+  width:1600px;height:900px;right:-500px;bottom:-520px;transform:rotate(-14deg);
+  border-top:4px solid rgba(200,230,76,.5);filter:blur(9px);
+  animation:drift2 15s ease-in-out infinite alternate;
+}
+@keyframes drift1{
+  from{transform:rotate(-9deg) translateY(0);opacity:.7}
+  to{transform:rotate(-4deg) translateY(-64px);opacity:1}
+}
+@keyframes drift2{
+  from{transform:rotate(-14deg) translateX(0);opacity:.55}
+  to{transform:rotate(-18deg) translateX(-90px);opacity:1}
+}
+.w1{animation-duration:8s}
+.w2{animation-duration:11s}
+
+/* feixe de luz varrendo o hero */
+.beam{
+  position:absolute;top:-15%;left:-40%;width:34%;height:140%;pointer-events:none;z-index:1;
+  background:linear-gradient(100deg,transparent,rgba(200,230,76,.07) 42%,rgba(228,248,124,.16) 50%,rgba(200,230,76,.07) 58%,transparent);
+  animation:sweep 7s ease-in-out infinite;
+}
+@keyframes sweep{
+  0%{transform:translateX(0) skewX(-14deg)}
+  58%,100%{transform:translateX(460%) skewX(-14deg)}
+}
+.glow{position:absolute;pointer-events:none;border-radius:50%}
+.g1{width:760px;height:560px;right:-140px;top:8%;background:radial-gradient(closest-side,rgba(200,230,76,.16),transparent 72%);animation:breathe 9s ease-in-out infinite alternate}
+.g2{width:520px;height:420px;left:-160px;bottom:-8%;background:radial-gradient(closest-side,rgba(200,230,76,.09),transparent 72%);animation:breathe 12s 2s ease-in-out infinite alternate}
+@keyframes breathe{from{opacity:.65;transform:scale(.97)}to{opacity:1;transform:scale(1.05)}}
+
+/* flares pontuais */
+.flare{position:absolute;pointer-events:none;border-radius:50%;background:radial-gradient(closest-side,rgba(228,248,124,.95),rgba(200,230,76,.3) 45%,transparent 72%);filter:blur(1.5px)}
+.f1{width:24px;height:24px;top:22%;left:37%;animation:pulseF 3.6s ease-in-out infinite}
+.f2{width:15px;height:15px;top:64%;left:10%;animation:pulseF 4.6s 1.1s ease-in-out infinite}
+.f3{width:19px;height:19px;top:34%;right:12%;animation:pulseF 5.2s 1.9s ease-in-out infinite}
+.f4{width:12px;height:12px;bottom:18%;right:34%;animation:pulseF 4.2s 2.6s ease-in-out infinite}
+@keyframes pulseF{0%,100%{opacity:.1;transform:scale(.7)}50%{opacity:1;transform:scale(1.35)}}
+
+/* ---------- hero ---------- */
+.hero{padding-block:0;border-bottom:1px solid var(--line)}
+.hero-meta{
+  display:flex;justify-content:space-between;gap:16px;
+  padding-block:14px;border-bottom:1px solid var(--line);
+  color:var(--dim);position:relative;z-index:2;
+}
+.hero-main{
+  position:relative;z-index:2;
+  padding-block:clamp(56px,7vw,104px) clamp(48px,6vw,80px);
+}
+.lockup{font-family:'Archivo';font-weight:900;text-transform:uppercase;line-height:.98;letter-spacing:.01em;font-size:clamp(60px,10.5vw,158px);margin-bottom:30px}
+.lockup .lt{font-weight:300;letter-spacing:.045em}
+.rise{animation:lineup-rise .85s var(--ease) backwards}
+.lockup .ln{display:block;animation:lineup-rise .85s var(--ease) backwards}
+.lockup .ln:nth-child(2){animation-delay:.12s}
+.lockup .ln:nth-child(3){animation-delay:.24s}
+@keyframes lineup-rise{from{opacity:0;transform:translateY(46px)}}
+.hero-copy .sub{font-size:clamp(17px,1.5vw,21px);color:var(--dim);max-width:42rem;margin-bottom:36px;line-height:1.55}
+.hero-copy .sub b{color:var(--white);font-weight:700}
+.hero-cta{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.hero-cta .price{font-family:'Space Mono';font-weight:700;font-size:13px;letter-spacing:.04em;line-height:1.6;color:var(--faint)}
+.hero-cta .price b{color:var(--lime);font-size:16px}
+
+/* carimbo do hero */
+.hero .stamp{
+  position:absolute;top:clamp(48px,6vw,84px);right:0;z-index:3;transform:rotate(6deg);
+  background:var(--lime);color:var(--ink);
+  padding:12px 18px;text-align:center;
+  font-family:'Anton';text-transform:uppercase;font-size:19px;line-height:1.12;letter-spacing:.03em;
+  box-shadow:0 10px 36px rgba(200,230,76,.3);
+}
+.hero .stamp small{display:block;font-family:'Space Mono';font-weight:700;font-size:10px;letter-spacing:.08em;color:rgba(20,35,13,.75)}
+@media (max-width:900px){
+  .lockup{font-size:clamp(48px,13.5vw,96px)}
+  .hero-meta{flex-direction:column;gap:2px;font-size:11px}
+  .hero .stamp{position:static;display:inline-block;transform:rotate(-2deg);margin-bottom:26px;font-size:16px}
+}
+
+/* ---------- strip de números ---------- */
+.numbers{border-bottom:1px solid var(--line);background:rgba(0,0,0,.18);position:relative;z-index:2}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.num{padding:22px clamp(12px,1.8vw,26px);display:flex;flex-direction:column;gap:2px}
+.num+.num{border-left:1px solid var(--line)}
+.num .v{font-family:'Anton';font-size:clamp(26px,2.6vw,38px);color:var(--lime);line-height:1;text-transform:uppercase}
+.num .v em{font-style:normal}
+.num .l{font-family:'Space Mono';font-weight:700;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+@media (max-width:760px){
+  .num-grid{grid-template-columns:1fr 1fr}
+  .num:nth-child(3){border-left:none}
+  .num:nth-child(n+3){border-top:1px solid var(--line)}
+}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--lime);color:var(--ink);overflow:hidden;padding-block:13px}
+.marquee .track{display:flex;width:max-content;animation:slide 14s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.marquee span{font-family:'Anton';text-transform:uppercase;font-size:clamp(19px,2.1vw,27px);letter-spacing:.03em;padding-inline:18px;white-space:nowrap}
+.marquee .sep{color:rgba(20,35,13,.45)}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- seções ---------- */
+section{padding-block:clamp(56px,7vw,96px)}
+.sec-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:clamp(28px,3.5vw,44px)}
+.sec-head .hgroup{display:flex;align-items:center;gap:16px}
+.sec-head .arr{width:clamp(30px,3vw,42px);height:clamp(30px,3vw,42px);flex:none;color:var(--lime);transform:rotate(-90deg);transition:transform .8s var(--ease) .15s}
+.sec-head .rv.in .arr,.sec-head .hgroup.in .arr{transform:none}
+.sec-head h2{font-size:clamp(40px,5.2vw,72px)}
+.sec-head .mono{color:var(--faint)}
+
+/* ---------- movimento ---------- */
+.movimento{background:var(--bg-0);border-block:1px solid var(--line);position:relative;overflow:hidden}
+.movimento .grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,4vw,72px);align-items:center;position:relative;z-index:2}
+.movimento h2{font-size:clamp(38px,4.8vw,68px)}
+.movimento h2 em{font-style:normal;color:var(--lime)}
+.movimento p{color:var(--dim);font-size:clamp(16px,1.3vw,18px);line-height:1.65}
+.movimento p+p{margin-top:18px}
+.movimento p b{color:var(--white)}
+@media (max-width:860px){.movimento .grid{grid-template-columns:1fr;gap:26px}}
+
+/* ---------- programa ---------- */
+.programa .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pcard{
+  border:1px solid var(--line);background:rgba(255,255,255,.03);
+  padding:clamp(20px,2vw,28px);min-height:220px;
+  display:flex;flex-direction:column;gap:12px;
+  transition:transform .3s var(--ease),border-color .3s;
+}
+.pcard:hover{transform:translateY(-5px);border-color:var(--line-lime)}
+.pcard svg{width:30px;height:30px;color:var(--lime)}
+.pcard h3{font-family:'Anton';text-transform:uppercase;font-size:clamp(21px,1.9vw,27px);letter-spacing:.02em}
+.pcard p{font-size:14.5px;color:var(--dim);line-height:1.55}
+.pcard-hot{background:var(--lime);border-color:var(--lime)}
+.pcard-hot svg{color:var(--ink)}
+.pcard-hot h3{color:var(--ink)}
+.pcard-hot p{color:rgba(20,35,13,.82)}
+@media (max-width:1020px){.programa .cards{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.programa .cards{grid-template-columns:1fr}}
+
+/* ---------- line-up ---------- */
+.row-spk{
+  display:grid;grid-template-columns:84px minmax(0,5fr) minmax(0,4fr) 40px;
+  gap:clamp(16px,2.5vw,36px);align-items:center;
+  padding-block:16px;border-top:1px solid var(--line);
+  transition:background .2s;
+}
+.row-spk:last-of-type{border-bottom:1px solid var(--line)}
+.row-spk:hover{background:rgba(255,255,255,.04)}
+.row-spk .ph{width:84px;height:84px;border:1px solid var(--line);object-fit:cover;object-position:center 12%;transition:transform .3s var(--ease)}
+.row-spk:hover .ph{transform:scale(1.06)}
+.row-spk .nm{font-size:clamp(28px,3.8vw,54px);line-height:.98;transition:color .2s,transform .35s var(--ease)}
+.row-spk:hover .nm{color:var(--lime);transform:translateX(8px)}
+/* cascata de entrada das fileiras */
+.lineup .rv .row-spk,.lineup .rv .row-soon{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.lineup .rv.in .row-spk,.lineup .rv.in .row-soon{opacity:1;transform:none}
+.lineup .rv.in .row-spk:nth-child(1){transition-delay:.02s}
+.lineup .rv.in .row-spk:nth-child(2){transition-delay:.08s}
+.lineup .rv.in .row-spk:nth-child(3){transition-delay:.14s}
+.lineup .rv.in .row-spk:nth-child(4){transition-delay:.2s}
+.lineup .rv.in .row-spk:nth-child(5){transition-delay:.26s}
+.lineup .rv.in .row-spk:nth-child(6){transition-delay:.32s}
+.lineup .rv.in .row-spk:nth-child(7){transition-delay:.38s}
+.lineup .rv.in .row-spk:nth-child(8){transition-delay:.44s}
+.lineup .rv.in .row-spk:nth-child(9){transition-delay:.5s}
+.lineup .rv.in .row-spk:nth-child(10){transition-delay:.56s}
+.lineup .rv.in .row-spk:nth-child(11){transition-delay:.62s}
+.lineup .rv.in .row-soon{transition-delay:.7s}
+.row-spk .tg{color:var(--dim);font-size:15px;line-height:1.45}
+.row-spk .ar{width:26px;height:26px;justify-self:end;color:var(--lime);opacity:.5;transition:opacity .2s,transform .2s}
+.row-spk:hover .ar{opacity:1;transform:translateX(4px)}
+.row-soon{
+  display:flex;align-items:center;gap:14px;justify-content:space-between;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-block:16px;
+}
+.row-soon .nm2{font-family:'Anton';text-transform:uppercase;font-size:clamp(22px,2.8vw,38px);color:var(--faint)}
+.pill-soon{font-family:'Space Mono';font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:var(--lime);color:var(--ink);padding:7px 12px}
+@media (max-width:760px){
+  .row-spk{grid-template-columns:62px 1fr;grid-template-rows:auto auto;row-gap:6px}
+  .row-spk .ph{width:62px;height:62px;grid-row:span 2}
+  .row-spk .tg{grid-column:2}
+  .row-spk .ar{display:none}
+}
+
+/* ---------- cronograma ---------- */
+.cron{background:var(--bg-0);border-block:1px solid var(--line)}
+.cron-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+.cron-day{
+  border:1px solid rgba(255,255,255,.35);
+  padding:clamp(24px,2.6vw,36px);
+  display:flex;flex-direction:column;gap:8px;
+}
+.cron-day .d{font-family:'Space Mono';font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}
+.cron-day .t{font-family:'Anton';text-transform:uppercase;font-size:clamp(30px,3.4vw,46px);line-height:1}
+.cron-day .h{font-family:'Archivo';font-weight:300;font-size:clamp(22px,2.2vw,30px);color:var(--white);letter-spacing:.02em}
+.cron-day p{font-size:14.5px;color:var(--dim);margin-top:6px;line-height:1.55}
+.cron-note{font-size:14px;color:var(--faint);display:flex;align-items:center;gap:10px}
+.cron-note svg{width:18px;height:18px;color:var(--lime);flex:none}
+@media (max-width:720px){.cron-grid{grid-template-columns:1fr}}
+
+/* ---------- bilheteria ---------- */
+.bilheteria{position:relative;overflow:hidden}
+.bilh-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,3.5vw,56px);align-items:start;position:relative;z-index:2}
+.ticket{
+  background:var(--bg-0);border:1px solid var(--line-lime);
+  padding:clamp(24px,2.6vw,36px);
+  position:relative;
+  box-shadow:0 24px 80px rgba(0,0,0,.4);
+}
+.ticket::before,.ticket::after{
+  content:"";position:absolute;top:50%;width:24px;height:24px;border-radius:50%;
+  background:var(--bg-2);border:1px solid var(--line-lime);transform:translateY(-50%);
+}
+.ticket::before{left:-13px}
+.ticket::after{right:-13px}
+.ticket .tk-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+.ticket .tk-top .mono{color:var(--faint)}
+.ticket .tk-lote{font-family:'Space Mono';font-weight:700;font-size:11px;background:var(--lime);color:var(--ink);padding:5px 10px;letter-spacing:.08em;text-transform:uppercase}
+.ticket .price-row{display:flex;align-items:baseline;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:18px;margin-bottom:18px}
+.ticket .price-row .val{font-family:'Anton';font-size:clamp(72px,7vw,104px);line-height:.9;color:var(--white)}
+.ticket .price-row .cur{font-family:'Anton';font-size:28px;color:var(--lime)}
+.ticket .price-row .plus{font-size:14px;font-weight:700;color:var(--lime);text-transform:uppercase;letter-spacing:.03em;line-height:1.3}
+.ticket ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.ticket li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;font-weight:500;color:var(--dim)}
+.ticket li svg{width:16px;height:16px;flex:none;margin-top:3px;color:var(--lime)}
+.ticket .btn{width:100%;padding:18px}
+.ticket .tk-safe{margin-top:14px;text-align:center;font-family:'Space Mono';font-weight:700;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
+
+.bonus-box{border:1px solid var(--line);background:rgba(255,255,255,.02)}
+.bonus-box .bx-head{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.bonus-box .bx-head h3{font-family:'Anton';text-transform:uppercase;font-size:22px}
+.bonus{display:grid;grid-template-columns:1fr auto;gap:14px;padding:15px 20px;border-bottom:1px solid var(--line)}
+.bonus strong{font-size:15.5px;font-weight:700;display:block;color:var(--white)}
+.bonus small{font-size:13.5px;color:var(--dim);line-height:1.5;display:block;margin-top:2px}
+.bonus .bval{font-family:'Space Mono';font-weight:700;font-size:13px;white-space:nowrap;color:var(--faint)}
+.total{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;background:var(--lime);color:var(--ink);flex-wrap:wrap}
+.total .t1{font-family:'Space Mono';font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:rgba(20,35,13,.7)}
+.total .t2{font-family:'Anton';font-size:30px;text-transform:uppercase}
+@media (max-width:920px){.bilh-grid{grid-template-columns:1fr}}
+
+/* ---------- garantia ---------- */
+.gar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gcard{border:1px solid var(--line);padding:clamp(20px,2vw,28px);display:flex;flex-direction:column;gap:10px;background:rgba(255,255,255,.03);transition:transform .3s var(--ease),border-color .3s}
+.gcard:hover{transform:translateY(-5px);border-color:var(--line-lime)}
+.gcard svg{width:28px;height:28px;color:var(--lime)}
+.gcard h3{font-family:'Anton';text-transform:uppercase;font-size:20px;letter-spacing:.02em}
+.gcard p{font-size:14.5px;color:var(--dim);line-height:1.55}
+@media (max-width:860px){.gar-grid{grid-template-columns:1fr}}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--bg-0);border-block:1px solid var(--line)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,3vw,48px);align-items:start}
+.faq details{border:1px solid var(--line);margin-bottom:14px;background:rgba(255,255,255,.02)}
+.faq details[open]{border-color:var(--line-lime)}
+.faq summary{
+  cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:16px 18px;font-size:15.5px;font-weight:700;color:var(--white);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{width:18px;height:18px;flex:none;color:var(--lime);transition:transform .3s var(--ease)}
+.faq details[open] summary svg{transform:rotate(45deg)}
+.faq .ans{padding:0 18px 18px;color:var(--dim);font-size:14.5px;line-height:1.6}
+@media (max-width:760px){.faq-grid{grid-template-columns:1fr}}
+
+/* ---------- fechamento + countdown ---------- */
+.final{position:relative;overflow:hidden;text-align:center;padding-block:clamp(72px,9vw,120px)}
+.final .inner{position:relative;z-index:2}
+.count{display:flex;justify-content:center;gap:clamp(10px,1.6vw,18px);margin-bottom:clamp(30px,4vw,44px);flex-wrap:wrap}
+.cbox{border:1px solid rgba(255,255,255,.35);padding:14px clamp(14px,2vw,24px);min-width:86px}
+.cbox .cv{font-family:'Anton';font-size:clamp(34px,4vw,54px);line-height:1;color:var(--lime)}
+#cd-s{animation:tick 1s ease-in-out infinite}
+@keyframes tick{0%,100%{opacity:1}50%{opacity:.55}}
+.cbox .cl{font-family:'Space Mono';font-weight:700;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:6px}
+.final h2{font-size:clamp(48px,7vw,104px)}
+.final h2 em{font-style:normal;color:var(--lime)}
+.final .sub{font-size:clamp(16px,1.4vw,19px);font-weight:400;color:var(--dim);max-width:44rem;margin:14px auto 34px}
+.final .micro{margin-top:18px;font-family:'Space Mono';font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
+
+/* ---------- footer ---------- */
+footer{background:var(--bg-0);border-top:1px solid var(--line);color:var(--dim);font-size:14px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;padding-block:48px 36px}
+footer img{height:22px;width:auto;margin-bottom:14px}
+footer h4{font-family:'Space Mono';font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);margin-bottom:12px}
+footer p{line-height:1.7;max-width:34rem}
+footer a{color:var(--white);text-decoration:none}
+footer a:hover{color:var(--lime)}
+.foot-base{border-top:1px solid var(--line);padding-block:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:'Space Mono';font-weight:700;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr;gap:26px}}
+
+/* ---------- pop-up ---------- */
+.modal{
+  position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+  padding:20px;background:rgba(5,10,3,.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+.modal.open{display:flex}
+.modal-card{
+  width:100%;max-width:440px;
+  background:var(--bg-1);color:var(--white);
+  border:1px solid var(--line-lime);
+  padding:clamp(26px,4.5vw,36px);
+  position:relative;
+  animation:rise .4s var(--ease);
+  max-height:calc(100dvh - 40px);overflow-y:auto;
+  box-shadow:0 30px 100px rgba(0,0,0,.6);
+}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.modal-card{animation:none}}
+.modal-close{
+  position:absolute;top:14px;right:14px;width:36px;height:36px;
+  border:1px solid var(--line);background:transparent;cursor:pointer;color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  transition:border-color .2s;
+}
+.modal-close:hover{border-color:var(--lime)}
+.modal-close svg{width:15px;height:15px}
+.modal-card h3{font-family:'Anton';text-transform:uppercase;font-weight:400;font-size:30px;margin-bottom:6px;padding-right:40px}
+.modal-card .msub{font-size:14.5px;color:var(--dim);margin-bottom:22px}
+.field{margin-bottom:14px}
+.field label{display:block;font-family:'Space Mono';font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;color:var(--dim)}
+.field input{
+  width:100%;padding:13px 14px;font-family:'Archivo';font-size:16px;color:var(--white);
+  background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:0;
+  transition:border-color .15s,box-shadow .15s;
+}
+.field input::placeholder{color:rgba(255,255,255,.35)}
+.field input:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 3px rgba(200,230,76,.18)}
+.field .err{display:none;font-size:12.5px;font-weight:700;color:#ff9a8a;margin-top:5px}
+.field.invalid input{border-color:#e0604c}
+.field.invalid .err{display:block}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
+.btn-submit{
+  width:100%;margin-top:6px;padding:17px 24px;
+  font-family:'Archivo';font-weight:700;font-size:15px;letter-spacing:.03em;text-transform:uppercase;
+  background:var(--lime);color:var(--ink);
+  border:none;border-radius:0;cursor:pointer;
+  box-shadow:0 10px 40px rgba(200,230,76,.25);
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  transition:transform .2s var(--ease),background .2s;
+}
+.btn-submit:hover{transform:translateY(-1px);background:var(--lime-bright)}
+.btn-submit:disabled{opacity:.75;cursor:wait;transform:none}
+.btn-submit svg{width:16px;height:16px}
+.modal-card .msafe{margin-top:14px;font-size:12px;line-height:1.55;color:var(--faint);text-align:center}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="top">
+  <div class="wrap">
+    <img src="/assets/img/logo_gold.png" alt="Novarys" width="126" height="23">
+    <span class="mono">Creator Summit · 1 + 2 de agosto, 2026</span>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero stage">
+  <div class="wave w1"></div>
+  <div class="wave w2"></div>
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <div class="flare f1"></div>
+  <div class="flare f2"></div>
+  <div class="flare f3"></div>
+  <div class="flare f4"></div>
+  <div class="beam"></div>
+  <div class="wrap">
+    <div class="hero-meta mono">
+      <span>Evento presencial · Auditório Bassoft, Alphaville-SP</span>
+      <span>Sábado 1 + domingo 2 de agosto</span>
+    </div>
+    <div class="hero-main">
+      <div class="stamp rv"><small>Auditório de 100 lugares</small>restam 47</div>
+      <div class="hero-copy">
+        <h1 class="lockup"><span class="ln">Novarys</span><span class="ln lt">Creator</span><span class="ln">Summit</span></h1>
+        <p class="sub rise" style="animation-delay:.42s"><b>2 dias, 48 horas.</b> Transformando conteúdo em negócios com os maiores nomes do empreendedorismo digital do Brasil.</p>
+        <div class="hero-cta rise" style="animation-delay:.58s">
+          <button class="btn" data-open-modal>
+            Garantir minha vaga
+            <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          </button>
+          <div class="price"><b>R$ 97</b> · você + 2 convidados<br>garantia de 7 dias</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NÚMEROS ===================== -->
+<div class="numbers">
+  <div class="wrap num-grid">
+    <div class="num"><span class="v"><em class="cnt" data-n="2">2</em> dias</span><span class="l">Sábado + domingo</span></div>
+    <div class="num"><span class="v"><em class="cnt" data-n="48">48</em> horas</span><span class="l">De imersão completa</span></div>
+    <div class="num"><span class="v"><em class="cnt" data-n="100">100</em></span><span class="l">Lugares no auditório</span></div>
+    <div class="num"><span class="v"><em class="cnt" data-n="11">11</em> nomes</span><span class="l">Confirmados + em breve</span></div>
+  </div>
+</div>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="track" style="animation-duration:24s">
+    <span>Geraldo Rufino</span><span class="sep">✦</span><span>Débora Santos</span><span class="sep">✦</span><span>Rogério Minotouro</span><span class="sep">✦</span><span>Melque Dourado</span><span class="sep">✦</span><span>André Belarmino</span><span class="sep">✦</span><span>Adenilson Rodrigues</span><span class="sep">✦</span><span>Rafael Medeiros</span><span class="sep">✦</span><span>Naira Alencar</span><span class="sep">✦</span><span>Apóstolo Valdir</span><span class="sep">✦</span><span>Dean Nonato</span><span class="sep">✦</span><span>Dra. Tatiana Pontes</span><span class="sep">✦</span>
+    <span>Geraldo Rufino</span><span class="sep">✦</span><span>Débora Santos</span><span class="sep">✦</span><span>Rogério Minotouro</span><span class="sep">✦</span><span>Melque Dourado</span><span class="sep">✦</span><span>André Belarmino</span><span class="sep">✦</span><span>Adenilson Rodrigues</span><span class="sep">✦</span><span>Rafael Medeiros</span><span class="sep">✦</span><span>Naira Alencar</span><span class="sep">✦</span><span>Apóstolo Valdir</span><span class="sep">✦</span><span>Dean Nonato</span><span class="sep">✦</span><span>Dra. Tatiana Pontes</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<!-- ===================== O MOVIMENTO ===================== -->
+<section class="movimento">
+  <div class="wrap grid">
+    <h2 class="display rv">Um movimento para quem cria conteúdo <em>e quer viver disso.</em></h2>
+    <div class="rv" style="--i:1">
+      <p>A Novarys está construindo a <b>maior comunidade de criadores do Brasil</b> e patrocinando quem quer transformar audiência em negócio. O Summit é o ponto de partida desse movimento.</p>
+      <p>Na prática: dois dias presenciais ao lado de criadores, influenciadores, médicos, nutricionistas e empresários. Você aprende com quem já fez, conecta com quem está fazendo e sai com um <b>plano claro para os próximos 30 dias</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROGRAMA ===================== -->
+<section class="programa">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="hgroup rv">
+        <svg class="arr" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm45.66-93.66a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69L130.34,101.66a8,8,0,0,1,11.32-11.32Z"/></svg>
+        <h2 class="display">O que você leva</h2>
+      </div>
+      <span class="mono rv" style="--i:1">Aprendizado prático nos dois dias</span>
+    </div>
+    <div class="cards">
+      <div class="pcard rv">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg>
+        <h3>Conteúdo</h3>
+        <p>Como produzir conteúdo autêntico e crescer de verdade, ensinado por quem vive disso na prática.</p>
+      </div>
+      <div class="pcard pcard-hot rv" style="--i:1">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M227.19,104.48A16,16,0,0,0,240,88.81V64a16,16,0,0,0-16-16H32A16,16,0,0,0,16,64V88.81a16,16,0,0,0,12.81,15.67,24,24,0,0,1,0,47A16,16,0,0,0,16,167.19V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V167.19a16,16,0,0,0-12.81-15.67,24,24,0,0,1,0-47ZM32,167.2a40,40,0,0,0,0-78.39V64H88V192H32Zm192,0V192H104V64H224V88.8a40,40,0,0,0,0,78.39Z"/></svg>
+        <h3>Monetização</h3>
+        <p>Caminhos reais para transformar audiência em receita, incluindo oportunidades de negócio com a própria Novarys.</p>
+      </div>
+      <div class="pcard rv" style="--i:2">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg>
+        <h3>Energia e foco</h3>
+        <p>Alto rendimento na rotina de quem cria todos os dias, com quem levou isso ao limite no esporte.</p>
+      </div>
+      <div class="pcard rv" style="--i:3">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/></svg>
+        <h3>Conexões</h3>
+        <p>Networking estruturado com criadores e empresários. Você sai com relacionamento, não com cartão.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LINE-UP ===================== -->
+<section class="lineup" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="hgroup rv">
+        <svg class="arr" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm45.66-93.66a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69L130.34,101.66a8,8,0,0,1,11.32-11.32Z"/></svg>
+        <h2 class="display">Palestrantes</h2>
+      </div>
+      <span class="mono rv" style="--i:1">11 confirmados + convidados em breve</span>
+    </div>
+    <div class="rv" style="--i:1">
+      <div class="row-spk">
+        <img class="ph" src="/assets/img/speaker_geraldo.jpg" alt="Geraldo Rufino" loading="lazy">
+        <div class="nm display">Geraldo Rufino</div>
+        <div class="tg">Maior autoridade em empreendedorismo do país.</div>
+        <svg class="ar" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </div>
+      <div class="row-spk">
+        <img class="ph" src="/assets/img/speaker_debora.jpg" alt="Débora Santos" loading="lazy">
+        <div class="nm display">Débora Santos</div>
+        <div class="tg">Conhecida como o furacão das vendas.</div>
+        <svg class="ar" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </div>
+      <div class="row-spk">
+        <img class="ph" src="/assets/img/speaker_minotauro.jpg" alt="Rogério Minotouro" loading="lazy">
+        <div class="nm display">Rogério Minotouro</div>
+        <div class="tg">Palestrante e ex-lutador de UFC e PRIDE.</div>
+        <svg class="ar" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </div>
+      <div class="row-spk">
+        <img class="ph" src="/assets/img/speaker_melque.jpg" alt="Melque Dourado" loading="lazy">
+        <div class="nm display">Melque Dourado</div>
+        <div class="tg">De camelô a dono de shopping center.</div>
+        <svg class="ar" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </div>
+      <div class="row-spk">
+        <img class="ph" src="/assets/img/speaker_andre.jpg" alt="André Belarmino" loading="lazy">
+        <div class="nm display">André Belarmino</div>
+        <div class="tg">Empresário e mentor. Anfitrião do Summit.</div>
+        <svg class="ar" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </div>
+      <div class="row-spk">
+        <img class="ph" src="/assets/img/speaker_adenilson.jpg" alt="Adenilson Rodrigues" loading="lazy">
+        <div class="nm display">Adenilson Rodrigues</div>
+        <div class="tg">Presidente do Grupo Novarys.</div>
+        <svg class="ar" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </div>
+      <div class="row-spk">
+        <img class="ph" src="/assets/img/speaker_rafael.jpg" alt="Rafael Medeiros" loading="lazy">
+        <div class="nm display">Rafael Medeiros</div>
+        <div class="tg"></div>
+        <svg class="ar" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </div>
+      <div class="row-spk">
+        <img class="ph" src="/assets/img/speaker_naira.jpg" alt="Naira Alencar" loading="lazy">
+        <div class="nm display">Naira Alencar</div>
+        <div class="tg"></div>
+        <svg class="ar" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </div>
+      <div class="row-spk">
+        <img class="ph" src="/assets/img/speaker_valdir.jpg" alt="Apóstolo Valdir" loading="lazy" style="object-position:center 22%">
+        <div class="nm display">Apóstolo Valdir</div>
+        <div class="tg"></div>
+        <svg class="ar" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </div>
+      <div class="row-spk">
+        <img class="ph" src="/assets/img/speaker_dean.jpg" alt="Dean Nonato" loading="lazy">
+        <div class="nm display">Dean Nonato</div>
+        <div class="tg"></div>
+        <svg class="ar" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </div>
+      <div class="row-spk">
+        <img class="ph" src="/assets/img/speaker_tatiana.jpg" alt="Dra. Tatiana Pontes" loading="lazy">
+        <div class="nm display">Dra. Tatiana Pontes</div>
+        <div class="tg"></div>
+        <svg class="ar" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </div>
+      <div class="row-soon">
+        <span class="nm2">+ grandes nomes do digital</span>
+        <span class="pill-soon">Em breve</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CRONOGRAMA ===================== -->
+<section class="cron">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="hgroup rv">
+        <svg class="arr" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm45.66-93.66a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69L130.34,101.66a8,8,0,0,1,11.32-11.32Z"/></svg>
+        <h2 class="display">Cronograma</h2>
+      </div>
+      <span class="mono rv" style="--i:1">Imersão completa nos dois dias</span>
+    </div>
+    <div class="cron-grid">
+      <div class="cron-day rv">
+        <span class="d">Dia 01/08 · Sábado</span>
+        <span class="t">Abertura + imersão</span>
+        <span class="h">08h às 18h</span>
+        <p>Credenciamento, palestras, workshops e as primeiras rodadas de networking do movimento.</p>
+      </div>
+      <div class="cron-day rv" style="--i:1">
+        <span class="d">Dia 02/08 · Domingo</span>
+        <span class="t">Imersão + encerramento</span>
+        <span class="h">08h às 18h</span>
+        <p>Palestras, dinâmicas, networking estruturado e a construção do seu plano de 30 dias.</p>
+      </div>
+    </div>
+    <div class="cron-note rv" style="--i:2">
+      <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>
+      A agenda detalhada, palestra por palestra, é enviada por e-mail e WhatsApp após a confirmação da vaga.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BILHETERIA ===================== -->
+<section class="bilheteria stage" id="oferta">
+  <div class="glow g2"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="hgroup rv">
+        <svg class="arr" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm45.66-93.66a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69L130.34,101.66a8,8,0,0,1,11.32-11.32Z"/></svg>
+        <h2 class="display">Seu ingresso</h2>
+      </div>
+      <span class="mono rv" style="--i:1">O valor existe para filtrar comprometimento</span>
+    </div>
+    <div class="bilh-grid">
+      <div class="ticket rv">
+        <div class="tk-top">
+          <span class="mono">Novarys Creator Summit</span>
+          <span class="tk-lote">Primeiro lote</span>
+        </div>
+        <div class="price-row">
+          <span class="cur">R$</span><span class="val">97</span>
+          <span class="plus">Vale por você<br>+ 2 convidados</span>
+        </div>
+        <ul>
+          <li><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Os dois dias completos, das 08h às 18h</li>
+          <li><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Todas as palestras e workshops do line-up</li>
+          <li><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Rodadas de networking estruturado</li>
+          <li><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>Os 5 bônus listados ao lado</li>
+        </ul>
+        <button class="btn" data-open-modal>
+          Garantir minha vaga
+          <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        </button>
+        <div class="tk-safe">Pagamento seguro pela Greenn</div>
+      </div>
+      <div class="bonus-box rv" style="--i:1">
+        <div class="bx-head">
+          <h3>Os bônus do ingresso</h3>
+          <span class="mono" style="color:var(--faint)">Inclusos no lote atual</span>
+        </div>
+        <div class="bonus">
+          <div><strong>Material estratégico completo</strong><small>Workbook com os frameworks do evento, templates prontos e checklist dos 30 dias seguintes.</small></div>
+          <span class="bval">R$ 297</span>
+        </div>
+        <div class="bonus">
+          <div><strong>Comunidade privada Novarys</strong><small>Acesso vitalício ao grupo de criadores e empresários do movimento.</small></div>
+          <span class="bval">R$ 497</span>
+        </div>
+        <div class="bonus">
+          <div><strong>Gravação completa do evento</strong><small>Todas as palestras em vídeo, com acesso vitalício.</small></div>
+          <span class="bval">R$ 397</span>
+        </div>
+        <div class="bonus">
+          <div><strong>Convite prioritário para os próximos eventos</strong><small>Fila VIP, desconto de participante e acesso antecipado.</small></div>
+          <span class="bval">R$ 297</span>
+        </div>
+        <div class="bonus" style="border-bottom:none">
+          <div><strong>Surpresa especial no evento</strong><small>Revelada apenas para quem estiver presente nos dois dias.</small></div>
+          <span class="bval">R$ 297</span>
+        </div>
+        <div class="total">
+          <span class="t1">Tudo somado: R$ 1.876</span>
+          <span class="t2">Hoje: R$ 97</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GARANTIA ===================== -->
+<section class="garantia">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="hgroup rv">
+        <svg class="arr" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm45.66-93.66a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69L130.34,101.66a8,8,0,0,1,11.32-11.32Z"/></svg>
+        <h2 class="display">Risco zero, três vezes</h2>
+      </div>
+      <span class="mono rv" style="--i:1">O risco fica com a organização</span>
+    </div>
+    <div class="gar-grid">
+      <div class="gcard rv">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208,40H48A16,16,0,0,0,32,56v58.77c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm0,74.79c0,78.42-66.35,104.62-80,109.18-13.53-4.51-80-30.69-80-109.18V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></svg>
+        <h3>7 dias, 100% de volta</h3>
+        <p>Não achou que valeu? Devolvemos todo o valor em até 7 dias. Sem perguntas, sem burocracia.</p>
+      </div>
+      <div class="gcard rv" style="--i:1">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>
+        <h3>Imprevisto? Também vale</h3>
+        <p>Comprou e não vai conseguir ir? A mesma garantia de 7 dias cobre a desistência, pelo motivo que for.</p>
+      </div>
+      <div class="gcard rv" style="--i:2">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M164.44,105.34l-48-32A8,8,0,0,0,104,80v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,129.05V95l25.58,17ZM216,40H40A16,16,0,0,0,24,56V168a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,128H40V56H216V168Zm16,40a8,8,0,0,1-8,8H32a8,8,0,0,1,0-16H224A8,8,0,0,1,232,208Z"/></svg>
+        <h3>Gravação vitalícia</h3>
+        <p>Todas as palestras ficam gravadas e são suas para sempre, já inclusas no ingresso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="hgroup rv">
+        <svg class="arr" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm45.66-93.66a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69L130.34,101.66a8,8,0,0,1,11.32-11.32Z"/></svg>
+        <h2 class="display">Perguntas diretas</h2>
+      </div>
+      <span class="mono rv" style="--i:1">Respostas sem rodeio</span>
+    </div>
+    <div class="faq-grid rv" style="--i:1">
+      <div>
+        <details>
+          <summary>Para quem é o Summit?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary>
+          <p class="ans">Criadores de conteúdo, influenciadores e microinfluenciadores que querem ganhar dinheiro com a internet. A sala também recebe médicos, nutricionistas e empresários do digital.</p>
+        </details>
+        <details>
+          <summary>Onde e quando acontece?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary>
+          <p class="ans">Sábado 1 e domingo 2 de agosto, das 08h às 18h, no Auditório Bassoft: Alameda Rio Negro, 585, Torre B, Alphaville, Barueri-SP.</p>
+        </details>
+        <details>
+          <summary>Posso levar convidados?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary>
+          <p class="ans">Sim. Seu ingresso vale por você e mais 2 convidados. Quer levar mais gente? Fale com a organização depois da compra.</p>
+        </details>
+      </div>
+      <div>
+        <details>
+          <summary>Preciso já ter um negócio estruturado?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary>
+          <p class="ans">Não. O conteúdo serve tanto para quem está começando a monetizar a audiência quanto para quem já fatura e quer estruturar e escalar.</p>
+        </details>
+        <details>
+          <summary>Vai ter networking de verdade ou só palestra?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary>
+          <p class="ans">Networking é parte oficial da programação: rodadas de conexão e coffee breaks estratégicos nos dois dias.</p>
+        </details>
+        <details>
+          <summary>Como recebo a agenda completa?<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary>
+          <p class="ans">Logo após a confirmação da vaga, a organização envia a agenda detalhada dos dois dias por e-mail e WhatsApp.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FECHAMENTO + COUNTDOWN ===================== -->
+<section class="final stage">
+  <div class="wave w2" style="bottom:auto;top:-560px"></div>
+  <div class="glow g1" style="top:auto;bottom:-30%"></div>
+  <div class="wrap inner">
+    <div class="count rv" aria-label="Contagem regressiva para o evento">
+      <div class="cbox"><div class="cv" id="cd-d">--</div><div class="cl">dias</div></div>
+      <div class="cbox"><div class="cv" id="cd-h">--</div><div class="cl">horas</div></div>
+      <div class="cbox"><div class="cv" id="cd-m">--</div><div class="cl">minutos</div></div>
+      <div class="cbox"><div class="cv" id="cd-s">--</div><div class="cl">segundos</div></div>
+    </div>
+    <h2 class="display rv" style="--i:1">100 lugares.<br>Restam <em>47</em>.</h2>
+    <p class="sub rv" style="--i:2">O auditório não cresce. Quando as cadeiras acabarem, acabou.</p>
+    <div class="rv" style="--i:3">
+      <button class="btn" data-open-modal>
+        Garantir minha vaga
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </button>
+    </div>
+    <div class="micro rv" style="--i:4">R$ 97 com 2 convidados · 1 e 2 de agosto, das 08h às 18h</div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="/assets/img/logo_gold.png" alt="Novarys">
+        <p>O Novarys Creator Summit é uma iniciativa do Grupo Novarys para construir a maior comunidade de criadores de conteúdo do Brasil.</p>
+      </div>
+      <div>
+        <h4>O evento</h4>
+        <p>1 e 2 de agosto de 2026 · 08h às 18h<br>Auditório Bassoft<br>Alameda Rio Negro, 585, Torre B<br>Alphaville, Barueri-SP</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p><a href="https://www.instagram.com/novarysoficial/" target="_blank" rel="noopener">@novarysoficial</a><br>Organização: André Belarmino</p>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>Novarys Creator Summit · Grupo Novarys</span>
+      <span>Pagamento processado pela Greenn</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== POP-UP DE CAPTURA ===================== -->
+<div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <button class="modal-close" data-close-modal aria-label="Fechar">
+      <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+    </button>
+    <h3 id="modalTitle">Garanta sua vaga</h3>
+    <p class="msub">Preencha seus dados para continuar para o pagamento seguro. Leva menos de um minuto.</p>
+    <form id="leadForm" novalidate>
+      <div class="field" data-field="name">
+        <label for="fName">Nome completo</label>
+        <input id="fName" name="name" type="text" autocomplete="name" placeholder="Seu nome" required>
+        <span class="err">Digite seu nome completo.</span>
+      </div>
+      <div class="field" data-field="email">
+        <label for="fEmail">E-mail</label>
+        <input id="fEmail" name="email" type="email" autocomplete="email" inputmode="email" placeholder="voce@email.com" required>
+        <span class="err">Digite um e-mail válido.</span>
+      </div>
+      <div class="field" data-field="phone">
+        <label for="fPhone">WhatsApp</label>
+        <input id="fPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999" required>
+        <span class="err">Digite um WhatsApp válido com DDD.</span>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label>Deixe este campo vazio<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <button type="submit" class="btn-submit" id="submitBtn">
+        <span>Continuar para o pagamento</span>
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+      </button>
+      <p class="msafe">Compra processada pela Greenn. Seus dados servem para confirmar sua inscrição e enviar as informações do evento.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+/* ================= CONFIG ================= */
+var CHECKOUT_URL = 'https://payfast.greenn.com.br/pre-checkout/gnvan7d';
+/* URL do webhook que recebe os leads (planilha Google via Apps Script, CRM etc).
+   Instruções completas no README.md. Vazio = pop-up só redireciona ao checkout. */
+var LEAD_WEBHOOK_URL = '';
+var TICKET = 'lote-1-r97';
+var EVENT_START = new Date('2026-08-01T08:00:00-03:00').getTime();
+window.dataLayer = window.dataLayer || [];
+/* GTM/Pixel: colar snippet aqui quando o tráfego for ativado */
+
+/* ================= REVEALS ================= */
+(function(){
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in')}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:.14, rootMargin:'0px 0px -4% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+/* ================= COUNT-UP DOS NÚMEROS ================= */
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.cnt');
+  if (!els.length) return;
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.textContent = e.getAttribute('data-n'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      io.unobserve(en.target);
+      var target = parseInt(en.target.getAttribute('data-n'), 10);
+      var t0 = performance.now(), dur = 1100;
+      function step(t){
+        var p = Math.min((t - t0) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        en.target.textContent = Math.round(target * eased);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }, {threshold:.6});
+  els.forEach(function(e){ e.textContent = '0'; io.observe(e); });
+})();
+
+/* ================= COUNTDOWN ================= */
+(function(){
+  var d = document.getElementById('cd-d'), h = document.getElementById('cd-h'),
+      m = document.getElementById('cd-m'), s = document.getElementById('cd-s');
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+  function tick(){
+    var diff = EVENT_START - Date.now();
+    if (diff <= 0) { d.textContent = h.textContent = m.textContent = s.textContent = '00'; return; }
+    d.textContent = pad(Math.floor(diff / 86400000));
+    h.textContent = pad(Math.floor(diff % 86400000 / 3600000));
+    m.textContent = pad(Math.floor(diff % 3600000 / 60000));
+    s.textContent = pad(Math.floor(diff % 60000 / 1000));
+    setTimeout(tick, 1000);
+  }
+  tick();
+})();
+
+/* ================= MODAL ================= */
+var modal = document.getElementById('leadModal');
+var lastFocus = null;
+
+function openModal(){
+  lastFocus = document.activeElement;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(function(){ document.getElementById('fName').focus(); }, 60);
+  window.dataLayer.push({event:'open_lead_popup'});
+}
+function closeModal(){
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+  if (lastFocus) lastFocus.focus();
+}
+document.querySelectorAll('[data-open-modal]').forEach(function(b){ b.addEventListener('click', openModal); });
+document.querySelectorAll('[data-close-modal]').forEach(function(b){ b.addEventListener('click', closeModal); });
+modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+/* ================= MÁSCARA TELEFONE BR ================= */
+var phoneInput = document.getElementById('fPhone');
+phoneInput.addEventListener('input', function(){
+  var d = this.value.replace(/\D/g,'').slice(0,11);
+  var out = '';
+  if (d.length > 0) out = '(' + d.slice(0,2);
+  if (d.length >= 3) out += ') ' + d.slice(2, d.length >= 11 ? 7 : 6);
+  if (d.length >= (d.length >= 11 ? 8 : 7)) out += '-' + d.slice(d.length >= 11 ? 7 : 6);
+  this.value = out;
+});
+
+/* ================= SUBMIT ================= */
+function setInvalid(name, invalid){
+  var f = document.querySelector('[data-field="' + name + '"]');
+  if (f) f.classList.toggle('invalid', invalid);
+}
+
+document.getElementById('leadForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('fName').value.trim();
+  var email = document.getElementById('fEmail').value.trim();
+  var phoneRaw = phoneInput.value.replace(/\D/g,'');
+  var honeypot = this.querySelector('[name="company"]').value;
+
+  var okName = name.length >= 2;
+  var okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+  var okPhone = phoneRaw.length >= 10;
+  setInvalid('name', !okName); setInvalid('email', !okEmail); setInvalid('phone', !okPhone);
+  if (!okName || !okEmail || !okPhone) return;
+
+  var btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.querySelector('span').textContent = 'Abrindo pagamento seguro';
+
+  var redirect = function(){
+    var q = '?name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&phone=' + encodeURIComponent(phoneRaw);
+    window.dataLayer.push({event:'lead_submit', ticket:TICKET});
+    window.location.href = CHECKOUT_URL + q;
+  };
+
+  if (honeypot || !LEAD_WEBHOOK_URL) { redirect(); return; }
+
+  var ctrl = new AbortController();
+  var timer = setTimeout(function(){ ctrl.abort(); }, 1600);
+
+  fetch(LEAD_WEBHOOK_URL, {
+    method:'POST',
+    mode:'no-cors',
+    signal:ctrl.signal,
+    body:new URLSearchParams({
+      name:name, email:email, phone:phoneRaw,
+      ticket:TICKET,
+      source:document.referrer || 'direct'
+    })
+  }).catch(function(){ /* lead nunca bloqueia a compra */ })
+    .finally(function(){ clearTimeout(timer); redirect(); });
+});
+</script>
+</body>
+</html>
